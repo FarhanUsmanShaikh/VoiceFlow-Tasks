@@ -15,13 +15,11 @@ const initDatabase = async () => {
 
     console.log('📦 Initializing database...');
 
-    // Create database if it doesn't exist
     const dbName = process.env.DB_NAME || 'task_tracker';
-    await connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName}`);
+    await connection.query(`CREATE DATABASE IF NOT EXISTS \`${dbName}\``);
     console.log(`✅ Database '${dbName}' ready`);
 
-    // Use the database
-    await connection.query(`USE ${dbName}`);
+    await connection.query(`USE \`${dbName}\``);
 
     // Create tasks table if it doesn't exist
     await connection.query(`
