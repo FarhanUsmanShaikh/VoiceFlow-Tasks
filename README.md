@@ -2,11 +2,14 @@
 
 A full-stack task management application with intelligent voice input capabilities. Built with React, Node.js, Express, and MySQL.
 
-**Live Demo**: https://voiceflow-task-tracker.vercel.app/  
-**Backend API**: https://backend-production-****.u*.railway.app/api/tasks
+## 🔗 Quick Links
 
-**Demo Video**: [Link to be added]  
-**GitHub Repository**: [Your repository URL]
+**Live Demo**: https://voiceflow-task-tracker.vercel.app/  
+**GitHub Repository**: https://github.com/FarhanUsmanShaikh/VoiceFlow
+
+**Demo Videos**:
+- [Full Features Showcase](https://drive.google.com/file/d/13TOtJILG4PPWw4f7STrwcmEmUi7qqdE1/view?usp=sharing)
+- [Voice Input Showcase (3+ Examples)](https://drive.google.com/file/d/1pCOBM-crbK4aCtXoo1qo7kkGhVZggQKJ/view?usp=sharing)
 
 ---
 
@@ -14,14 +17,13 @@ A full-stack task management application with intelligent voice input capabiliti
 
 1. [Features](#-features)
 2. [Tech Stack](#-tech-stack)
-3. [Prerequisites](#-prerequisites)
-4. [Project Setup](#-project-setup)
+3. [Project Setup](#-project-setup)
+4. [Usage](#-usage)
 5. [API Documentation](#-api-documentation)
 6. [Design Decisions & Assumptions](#-design-decisions--assumptions)
 7. [AI Tools Usage](#-ai-tools-usage)
 8. [Known Limitations](#-known-limitations)
 9. [Future Enhancements](#-future-enhancements)
-10. [Live Deployment](#-live-deployment)
 
 ---
 
@@ -72,35 +74,25 @@ A full-stack task management application with intelligent voice input capabiliti
 - **Joi**: Schema validation for API endpoints
 - **Web Speech API**: Browser-native speech recognition (Chrome, Edge, Safari)
 
-## 📋 Prerequisites
+## � Prroject Setup
 
-Before you begin, ensure you have the following installed:
+### Prerequisites
 
-- **Node.js** v18 or higher ([Download](https://nodejs.org/))
-- **MySQL** 8.0 or higher ([Download](https://dev.mysql.com/downloads/))
-- **Modern browser** with Web Speech API support (Chrome, Edge, or Safari recommended)
+- **Node.js** v18+ ([Download](https://nodejs.org/))
+- **MySQL** 8.0+ ([Download](https://dev.mysql.com/downloads/))
+- **Modern browser** with Web Speech API support (Chrome, Edge, or Safari)
 - **npm** (comes with Node.js)
-
----
-
-## 🚀 Project Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd voice-task-tracker
+git clone https://github.com/FarhanUsmanShaikh/VoiceFlow.git
+cd VoiceFlow
 ```
 
-### 2. Install MySQL
+### 2. Backend Setup
 
-- Download and install MySQL 8.0+ from https://dev.mysql.com/downloads/
-- Set a root password during installation
-- Ensure MySQL service is running
-
-**Note:** The database will be created automatically when you start the backend! No manual SQL commands needed.
-
-### 3. Backend Setup
+**Note:** The database will be created automatically! No manual SQL commands needed.
 
 ```bash
 cd backend
@@ -145,7 +137,7 @@ The backend server will run on `http://localhost:5000`
 🚀 Server running on port 5000
 ```
 
-### 4. Frontend Setup
+### 3. Frontend Setup
 
 ```bash
 cd frontend
@@ -552,165 +544,57 @@ voice-task-tracker/
 
 ### Assumptions
 
-#### User Assumptions
 1. **Single-user application**: No authentication or multi-user support needed
 2. **English language**: Voice input and NLP parsing optimized for English
 3. **Desktop-first**: Primary use case is desktop (mobile is responsive but not optimized)
 4. **Modern browser**: Users have Chrome, Edge, or Safari with Web Speech API support
-
-#### Technical Assumptions
-1. **Internet connection**: Required for Web Speech API (uses Google's servers)
-2. **Microphone access**: Users will grant microphone permissions
-3. **Date context**: Relative dates are interpreted from current date
-4. **Time zones**: All dates use server's local timezone
-
-#### Voice Input Assumptions
-1. **Clear speech**: Users speak clearly with minimal background noise
-2. **Natural phrasing**: Users speak naturally (e.g., "Send email by tomorrow, high priority")
-3. **Reasonable length**: Transcripts are typically 10-50 words
-4. **Editing capability**: Users will review and edit parsed fields if needed
-
-#### Data Assumptions
-1. **Task titles**: Typically 5-50 characters
-2. **Descriptions**: Optional, typically 0-500 characters
-3. **Due dates**: Usually within next 30 days
-4. **Priority distribution**: Most tasks are medium priority
-
-### Known Limitations
-
-1. **Web Speech API**: Requires internet connection, accuracy varies with accent
-2. **Date parsing**: May not handle all edge cases (e.g., "the day after the day after tomorrow")
-3. **Language support**: Only English is supported
-4. **Browser compatibility**: Limited to browsers with Web Speech API
-5. **No offline mode**: Application requires internet connection
-6. **Single-user**: No authentication or task sharing
+5. **Internet connection**: Required for Web Speech API
+6. **Microphone access**: Users will grant microphone permissions
+7. **Clear speech**: Users speak clearly with minimal background noise
 
 ## 🤖 AI Tools Usage
 
 ### Tools Used
 
-#### 1. Claude (Anthropic) - Primary AI Assistant
-- **Usage**: Extensive use throughout the project
-- **Role**: Architecture guidance, code generation, problem-solving
+**Claude (Anthropic)** - Primary AI Assistant
+- Architecture guidance and design decisions
+- Code generation and boilerplate
+- Debugging and problem-solving
+- Documentation writing
+- UI/UX enhancements and animations
 
-#### 2. GitHub Copilot - Code Completion
-- **Usage**: During development for code suggestions
-- **Role**: Autocomplete, boilerplate generation
+**GitHub Copilot** - Code Completion
+- Autocomplete and code suggestions
+- Boilerplate generation
 
-### What AI Tools Helped With
+### Key Learnings
 
-#### Architecture & Design
-- **Full-stack architecture**: Guidance on separating frontend, backend, and database layers
-- **Component structure**: Suggestions for React component organization
-- **API design**: RESTful endpoint structure and naming conventions
-- **Database schema**: Table design, indexes, and relationships
+**Technical Skills Acquired:**
+- Full-stack development from database to UI
+- React hooks (useState, useEffect, useRef)
+- Web Speech API and browser-native features
+- Natural language processing with Chrono-node
+- Modern drag-and-drop with @dnd-kit
+- RESTful API design and validation
+- Tailwind CSS and dark mode implementation
 
-#### Code Generation
-- **Boilerplate code**: React components, Express routes, middleware
-- **Validation schemas**: Joi validation rules for all API endpoints
-- **Error handling**: Try-catch blocks, error middleware, user-friendly messages
-- **NLP parser**: Logic for extracting task details from voice transcripts
-- **SQL queries**: Database operations with proper error handling
+**Best Practices Learned:**
+- Separation of concerns and modular architecture
+- Component reusability and single responsibility
+- Comprehensive error handling
+- Client and server-side validation
+- Consistent API response formats
+- Clear code organization and documentation
 
-#### Problem Solving
-- **Voice input parsing**: Regex patterns for extracting priorities, dates, and titles
-- **Date parsing**: Integration of Chrono-node for natural language dates
-- **Drag-and-drop**: Implementation with @dnd-kit library
-- **Dark mode**: Tailwind CSS dark mode classes across all components
-- **Bug fixes**: 
-  - Priority parsing bug ("low priority" incorrectly detected as "high")
-  - Drag-and-drop status update bug
-  - Multiple delete modals glitch
+**How AI Tools Helped:**
+- Accelerated development by ~40%
+- Quick access to architecture recommendations
+- Rapid boilerplate generation
+- Faster debugging with AI suggestions
+- More focus on business logic and UX
+- Exposure to best practices and patterns
 
-#### Documentation
-- **README**: Comprehensive setup instructions and API documentation
-- **Code comments**: Explaining complex logic, especially in NLP parser
-- **API documentation**: Request/response examples for all endpoints
-- **Design decisions**: Documenting architectural choices and rationale
-
-### Notable Prompts & Approaches
-
-#### 1. NLP Parser Development
-**Prompt**: "Create a parser that extracts task title, due date, priority, and status from natural language. Handle relative dates like 'tomorrow' and 'next Monday', and priority keywords like 'urgent' and 'high priority'."
-
-**Result**: Comprehensive NLP parser using Chrono-node and regex patterns
-
-#### 2. Drag-and-Drop Implementation
-**Prompt**: "Implement drag-and-drop for Kanban board using @dnd-kit. Tasks should move between columns and update status in the database."
-
-**Result**: Smooth drag-and-drop with proper state management and API calls
-
-#### 3. Dark Mode Implementation
-**Prompt**: "Add complete dark mode support using Tailwind CSS. Include theme toggle with persistent preference."
-
-**Result**: Full dark theme across all components with localStorage persistence
-
-#### 4. Bug Fixing
-**Prompt**: "The priority parser is detecting 'low priority' as 'high'. Fix the regex pattern."
-
-**Result**: Reordered regex checks and removed ambiguous keywords
-
-### What I Learned
-
-#### Technical Skills
-1. **Full-stack development**: Building a complete application from database to UI
-2. **React hooks**: useState, useEffect, useRef for state management
-3. **Web Speech API**: Browser-native speech recognition
-4. **Natural language processing**: Using Chrono-node for date parsing
-5. **Drag-and-drop**: Modern drag-and-drop with @dnd-kit
-6. **REST API design**: Proper HTTP methods, status codes, and response formats
-7. **Input validation**: Joi schemas for backend validation
-8. **Error handling**: Comprehensive error handling on both frontend and backend
-9. **Tailwind CSS**: Rapid UI development with utility classes
-10. **Dark mode**: Implementing theme switching with Tailwind
-
-#### Best Practices
-1. **Separation of concerns**: Clear boundaries between layers
-2. **Component modularity**: Reusable, single-responsibility components
-3. **Error handling**: Always handle errors gracefully with user-friendly messages
-4. **Input validation**: Validate on both client and server
-5. **API design**: Consistent response format, proper status codes
-6. **Code organization**: Logical folder structure, clear naming conventions
-7. **Documentation**: Comprehensive README with setup instructions
-
-#### Problem-Solving Approaches
-1. **Iterative development**: Build features incrementally, test frequently
-2. **Debugging**: Use console.log, browser DevTools, and error messages
-3. **Research**: Read library documentation (Chrono-node, @dnd-kit)
-4. **Testing**: Manual testing of all features and edge cases
-5. **Refactoring**: Improve code quality after initial implementation
-
-### How AI Tools Changed My Approach
-
-#### Before AI Tools
-- Would spend hours researching libraries and best practices
-- Write boilerplate code manually
-- Struggle with complex regex patterns
-- Take longer to debug issues
-
-#### With AI Tools
-- Quickly get architecture recommendations
-- Generate boilerplate code rapidly
-- Get regex patterns and NLP logic suggestions
-- Debug faster with AI-suggested solutions
-- Focus more on business logic and UX
-
-### Limitations of AI Tools
-
-1. **Not always correct**: AI suggestions sometimes need debugging
-2. **Context limitations**: AI doesn't always understand full project context
-3. **Outdated information**: Some library versions or APIs may have changed
-4. **Over-reliance risk**: Important to understand the code, not just copy it
-
-### Key Takeaway
-
-AI tools are **powerful accelerators** but not replacements for understanding. They helped me:
-- Build faster (saved ~40% development time)
-- Learn more (exposed to best practices and patterns)
-- Focus on UX (less time on boilerplate, more on user experience)
-- Debug efficiently (quick suggestions for common issues)
-
-The key is to **use AI as a learning tool**, not just a code generator. Always understand what the code does and why.
+**Important Note:** While AI tools accelerated development, I ensured to understand every piece of code and made deliberate design decisions. AI tools are powerful accelerators, not replacements for understanding.
 
 ## ⚠️ Known Limitations
 
@@ -738,12 +622,6 @@ The key is to **use AI as a learning tool**, not just a code generator. Always u
 5. **No Task Assignment**: Cannot assign tasks to team members
 6. **No Attachments**: Cannot attach files to tasks
 7. **No Notifications**: No email or push notifications for due dates
-
-### Technical Limitations
-1. **No Automated Tests**: No unit tests or integration tests (manual testing only)
-2. **No CI/CD**: No automated deployment pipeline
-3. **No Logging**: Limited server-side logging for debugging
-4. **No Analytics**: No usage tracking or analytics
 
 ---
 
@@ -813,104 +691,6 @@ The key is to **use AI as a learning tool**, not just a code generator. Always u
     - Saved filter presets
     - Advanced search with operators
 
-### Technical Improvements
-13. **Automated Testing**
-    - Unit tests (Jest, React Testing Library)
-    - Integration tests
-    - E2E tests (Playwright, Cypress)
-
-14. **Performance Optimization**
-    - Code splitting
-    - Lazy loading
-    - Caching strategies
-
-15. **CI/CD Pipeline**
-    - Automated testing on PR
-    - Automated deployment
-    - Environment management
-
-16. **Monitoring & Logging**
-    - Error tracking (Sentry)
-    - Performance monitoring
-    - User analytics
-
----
-
-## 🚀 Live Deployment
-
-**Frontend (Vercel)**: https://voiceflow-task-tracker.vercel.app/  
-**Backend (Railway)**: https://backend-production-****.u*.railway.app/api/tasks  
-**Database**: MySQL on Railway
-
-> **Note**: This project includes full end-to-end deployment on production infrastructure. While not required for the assignment, I developed and deployed the complete application to demonstrate real-world deployment capabilities. You can now access the assignment both locally and through the deployed servers.
-
----
-
-## 🎥 Demo Video
-
-**Video Link**: [To be added]
-
-The demo video includes:
-1. Application walkthrough (Kanban board, list view, filters)
-2. Voice input demonstrations (3+ examples with varying complexity)
-3. Brief code walkthrough (NLP parser, API structure, React components)
-4. Dark mode showcase
-
-**Duration**: 8-10 minutes  
-**Platform**: Loom / Google Drive
-
----
-
-## 📦 Project Structure
-
-```
-voice-task-tracker/
-├── backend/
-│   ├── database/
-│   │   ├── schema.sql          # Database schema
-│   │   └── seed.sql            # Sample data
-│   ├── src/
-│   │   ├── config/
-│   │   │   └── database.js     # MySQL connection
-│   │   ├── controllers/
-│   │   │   └── taskController.js
-│   │   ├── middleware/
-│   │   │   ├── validation.js   # Joi validation
-│   │   │   └── errorHandler.js
-│   │   ├── models/
-│   │   │   └── Task.js
-│   │   ├── routes/
-│   │   │   └── taskRoutes.js
-│   │   ├── services/
-│   │   │   └── taskService.js
-│   │   ├── utils/
-│   │   │   └── nlpParser.js    # Voice parsing logic
-│   │   └── server.js
-│   ├── .env.example
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── TaskBoard.jsx
-│   │   │   ├── TaskCard.jsx
-│   │   │   ├── TaskForm.jsx
-│   │   │   ├── TaskList.jsx
-│   │   │   ├── VoiceInput.jsx
-│   │   │   ├── VoiceTaskReview.jsx
-│   │   │   ├── LoadingAnimation.jsx
-│   │   │   └── ...
-│   │   ├── services/
-│   │   │   ├── api.js
-│   │   │   └── taskService.js
-│   │   ├── types/
-│   │   │   └── task.js
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── .env.example
-│   └── package.json
-└── README.md
-```
-
 ---
 
 ## 📝 License
@@ -919,36 +699,6 @@ This project is created for educational purposes as part of an SDE 1 assignment.
 
 ---
 
-## 👤 Author
-
-Created as part of an SDE 1 role assignment demonstrating full-stack development skills with modern web technologies.
-
----
-
-## 🙏 Acknowledgments
-
-### Libraries & Tools
-- **React Team** - React framework
-- **Tailwind Labs** - Tailwind CSS
-- **Claudéric Demers** - @dnd-kit library
-- **Wanasit Tanakitrungruang** - Chrono-node library
-- **Google** - Web Speech API
-
-### AI Assistance
-- **Claude (Anthropic)** - Code generation and architecture guidance
-- **GitHub Copilot** - Code completion and suggestions
-
----
-
-## 📞 Support
-
-For questions or issues:
-1. Check the [Project Setup](#-project-setup) section
-2. Review the [API Documentation](#-api-documentation)
-3. Check [Known Limitations](#-known-limitations)
-
----
-
-**Last Updated**: December 3, 2025  
+**Last Updated**: December 5, 2025  
 **Version**: 1.0.0  
 **Status**: Production Ready ✅
