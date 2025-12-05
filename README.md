@@ -587,7 +587,7 @@ voice-task-tracker/
 - Clear code organization and documentation
 
 **How AI Tools Helped:**
-- Accelerated development by ~40%
+- Accelerated development
 - Quick access to architecture recommendations
 - Rapid boilerplate generation
 - Faster debugging with AI suggestions
