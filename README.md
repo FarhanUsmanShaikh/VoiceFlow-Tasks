@@ -7,12 +7,6 @@ A full-stack task management application with intelligent voice input capabiliti
 **Live Demo**: https://voiceflow-task-tracker.vercel.app/  
 **GitHub Repository**: https://github.com/FarhanUsmanShaikh/VoiceFlow
 
-**Demo Videos**:
-- [Full Features Showcase](https://drive.google.com/file/d/13TOtJILG4PPWw4f7STrwcmEmUi7qqdE1/view?usp=sharing)
-- [Voice Input Showcase (3+ Examples)](https://drive.google.com/file/d/1pCOBM-crbK4aCtXoo1qo7kkGhVZggQKJ/view?usp=sharing)
-
----
-
 ## 📑 Table of Contents
 
 1. [Features](#-features)
@@ -552,50 +546,6 @@ voice-task-tracker/
 6. **Microphone access**: Users will grant microphone permissions
 7. **Clear speech**: Users speak clearly with minimal background noise
 
-## 🤖 AI Tools Usage
-
-### Tools Used
-
-**Claude (Anthropic)** - Primary AI Assistant
-- Architecture guidance and design decisions
-- Code generation and boilerplate
-- Debugging and problem-solving
-- Documentation writing
-- UI/UX enhancements and animations
-
-**GitHub Copilot** - Code Completion
-- Autocomplete and code suggestions
-- Boilerplate generation
-
-### Key Learnings
-
-**Technical Skills Acquired:**
-- Full-stack development from database to UI
-- React hooks (useState, useEffect, useRef)
-- Web Speech API and browser-native features
-- Natural language processing with Chrono-node
-- Modern drag-and-drop with @dnd-kit
-- RESTful API design and validation
-- Tailwind CSS and dark mode implementation
-
-**Best Practices Learned:**
-- Separation of concerns and modular architecture
-- Component reusability and single responsibility
-- Comprehensive error handling
-- Client and server-side validation
-- Consistent API response formats
-- Clear code organization and documentation
-
-**How AI Tools Helped:**
-- Accelerated development
-- Quick access to architecture recommendations
-- Rapid boilerplate generation
-- Faster debugging with AI suggestions
-- More focus on business logic and UX
-- Exposure to best practices and patterns
-
-**Important Note:** While AI tools accelerated development, I ensured to understand every piece of code and made deliberate design decisions. AI tools are powerful accelerators, not replacements for understanding.
-
 ## ⚠️ Known Limitations
 
 ### Voice Input Limitations
@@ -697,8 +647,6 @@ voice-task-tracker/
 
 This project is created for educational purposes as part of an SDE 1 assignment.
 
----
-
-**Last Updated**: December 5, 2025  
+**Last Updated**: December 31, 2025  
 **Version**: 1.0.0  
 **Status**: Production Ready ✅
